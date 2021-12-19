@@ -6,6 +6,9 @@ class Movies:
         
         #variables
         self.watched = 0
+    
+    def __str__(self) -> str:
+        return f"{self.title} ({self.year}"
 
 Movie1 = Movies(title = "Skazani na Shawshank", year = "1994", genre = "Dramat")
 
