@@ -14,16 +14,6 @@ class Movies:
     
     def play(self,step=1):
         self.played += step
-    
-    @property
-    def title_lenghter(self):
-        title_lenght = len(self.title)
-        return title_lenght
-    
-    @property
-    def genre_lenghter(self):
-        genre_lenght = len(self.genre)
-        return genre_lenght
 
 class TvSeries(Movies):
     def __init__(self, episode, season, *args, **kwargs):
@@ -90,7 +80,7 @@ def search():
     title = input("Jakiego filmu szukasz: ")
     for item in library:
         if item.title.lower() == title.lower():
-            print(item)
+            print(f"Znaleziono: {item}")
 
 def generate_views_mulitplier(func):
     def wrapper(*args, **kwargs):
@@ -136,10 +126,10 @@ def add_series(stitle, syear, sgenre, season_no, episodes_no):
 #add_series("Sherlock", 2010, "kryminał", 2, 5)
 library_show()
 generate_views()
-top_titles()
 #search()
 #get_series()
 #get_movies()
 #movie1.play(12)
 #series1.play(98)
 #series2.play(14)
+top_titles()
