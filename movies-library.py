@@ -23,6 +23,7 @@ class TvSeries(Movies):
 
     def __str__(self) -> str:
         return "%s S%02.0fE%02.0f" % (self.title, self.season, self.episode)
+    
 
 movie1 = Movies(title = "Skazani na Shawshank", year = 1994, genre = "Dramat")
 movie2 = Movies(title = "Nietykalni", year = 2011, genre = "Komedia")
@@ -122,6 +123,8 @@ def top_titles(count=3,type=None):
 def add_series(stitle, syear, sgenre, season_no, episodes_no):
     for i in range(1, episodes_no+1):
         library.append(TvSeries(title = stitle, year = syear, genre = sgenre, episode = i, season = season_no))
+
+
 
 #add_series("Sherlock", 2010, "kryminał", 2, 5)
 library_show()
